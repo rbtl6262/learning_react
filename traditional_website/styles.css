@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.red-box {
+  background-color: #ff6b6b;
+}
+
+.blue-box {
+  background-color: #4ecdc4;
+}
+
+.green-box {
+  background-color: #45b7d1;
+}
