@@ -21,17 +21,21 @@ const StyledBox = styled.div`
 `;
 
 // Reusable Box component
-function Box({ color, children }) {
-  return <StyledBox color={color}>{children}</StyledBox>;
+function Box({ color, text }) {
+  return (
+    <StyledBox color={color}>
+      <p>{text}</p>
+    </StyledBox>
+  );
 }
 
 // App component
 function App() {
   return (
     <Container>
-      <Box color="#ff6b6b">Box 1</Box>
-      <Box color="#4ecdc4">Box 2</Box>
-      <Box color="#45b7d1">Box 3</Box>
+      <Box color="#ff6b6b" text="Box 1" />
+      <Box color="#4ecdc4" text="Box 2" />
+      <Box color="#45b7d1" text="Box 3" />
     </Container>
   );
 }
