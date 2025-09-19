@@ -29,11 +29,16 @@ const StyledButton = styled.button`
 
 // Reusable Button component with local state
 function CounterButton({ color, children }) {
+  // const count = 0;
   const [count, setCount] = useState(0);
 
+  // if (count === 10) {
+  //   console.log("Count is 10");
+  // }
   useEffect(() => {
     if (count === 10) {
       console.log("Count is 10");
+      setCount(0);
     }
   }, [count]);
 
