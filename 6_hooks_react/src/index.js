@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import styled from "styled-components";
 
@@ -30,6 +30,12 @@ const StyledButton = styled.button`
 // Reusable Button component with local state
 function CounterButton({ color, children }) {
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (count === 10) {
+      console.log("Count is 10");
+    }
+  }, [count]);
 
   const handleClick = () => {
     setCount(count + 1);
